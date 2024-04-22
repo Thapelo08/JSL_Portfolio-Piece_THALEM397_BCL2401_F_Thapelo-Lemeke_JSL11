@@ -92,7 +92,7 @@ function filterAndDisplayTasksByBoard(boardName) {
       tasksContainer.appendChild(taskElement);
     });
   };
-}
+
 
 
 function refreshTasksUI() {
