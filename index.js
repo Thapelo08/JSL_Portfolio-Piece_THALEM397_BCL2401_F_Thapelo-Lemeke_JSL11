@@ -9,7 +9,7 @@
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
   if (!localStorage.getItem('tasks')) {
-    localStorage.setItem('tasks', JSON.stringify(initialData)); 
+    localStorage.setItem('tasks', JSON.stringify(initializeData)); 
     localStorage.setItem('showSideBar', 'true')
   } else {
     console.log('Data already exists in localStorage');
