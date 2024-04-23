@@ -1,5 +1,14 @@
 // TASK: import helper functions from utils
-// TASK: import initialData
+// TASK: import initialData 
+import {initialData} from './initialData.js'
+import {
+  //utils/function.js
+  getTasks,
+  createNewTask,
+  patchTask,
+  putTask,
+  deleteTask
+} from './utils/taskFunctions.js'
 
 
 /*************************************************************************************************************************************************
@@ -205,7 +214,7 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
-  
+
  
 }
 
