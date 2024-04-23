@@ -1145,10 +1145,10 @@ input:checked + #label-checkbox-theme:after {
   }
 
   #label-checkbox-theme {
-    /* width: 50px; */
-    /* height: 2px; */
+     width: 50px; 
+     height: 2px;
     right: 16px;
-    /* border: 2px solid yellow; */
+   border: 2px solid yellow; 
   }
 
   #icon-dark {
