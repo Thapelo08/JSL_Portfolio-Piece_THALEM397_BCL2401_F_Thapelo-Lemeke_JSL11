@@ -436,7 +436,7 @@ header {
 
 #editBtnsDiv {
   border-radius: 5px;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   position: absolute;
   z-index: 3;
   display: flex;
@@ -454,8 +454,8 @@ header {
 
 #editBoardDiv {
   position: absolute;
-  /* z-index: 3; */
-  /* display: flex; */
+  z-index: 3;
+   display: flex; 
   flex-direction: column;
   top: 110px;
   right: 58px;
