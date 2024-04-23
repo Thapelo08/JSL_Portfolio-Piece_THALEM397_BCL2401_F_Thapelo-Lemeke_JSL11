@@ -205,6 +205,7 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
+  
  
 }
 
