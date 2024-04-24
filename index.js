@@ -211,14 +211,14 @@ function setupEventListeners() {
   });
 
   // Show sidebar event listener
-  elements.hideSideBarBtn.addEventListener('click', () => {toggleSidebar(false)});
-  elements.showSideBarBtn.addEventListener('click', () => {toggleSidebar(true)});
+  elements.hideSideBarBtn.onclick = () => toggleSidebar(false);
+  elements.showSideBarBtn.onclick = () => toggleSidebar(true);
 
   // Theme switch event listener
   elements.themeSwitch.addEventListener('change', toggleTheme);
 
   // Show Add New Task Modal event listener
-  elements.createNewTaskBtn.addEventListener('click', () => {
+  elements.createTaskBtn.addEventListener('click', () => {
     toggleModal(true);
     elements.filterDiv.style.display = 'block'; // Also show the filter overlay
   });
@@ -244,10 +244,11 @@ function addTask(event) {
 
   //Assign user input to the task object
     const task = {
-      title: event.target.title.value,
-      description: event.target.description.value,
-      currStatus:  event.target.status.value
-      
+      board: activeBoard,
+      description: elements.descriptionInput.value,
+      id: localStorage.getItem("id"),
+      status: elements.selectStatus.value,
+      title: elements.titleInput.value,
     };
     const newTask = createNewTask(task);
     if (newTask) {
