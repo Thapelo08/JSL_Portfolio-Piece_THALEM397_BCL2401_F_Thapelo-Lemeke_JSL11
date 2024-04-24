@@ -27,7 +27,59 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+// navigation bar
+sideBarDiv: document.getElementById('side-bar-div'),
+boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
+headLineSidePanel: document.getElementById('head-line-side-panel'),
+iconDark: document.getElementById('icon-dark'),
+themeSwitch: document.getElementById('switch'),
+iconLight: document.getElementById('icon-light'),
+hideSideBarBtn: document.getElementById('.hide-side-bar-btn'),
+showSideBarBtn: document.getElementById('show-side-bar-btn'),
+sideBar: document.querySelector('side-bar'),
+boardsNavLinksDiv: document.querySelector('boards-nav-links-div'),
+sideBarBottom: document.querySelector('side-bar-bottom'),
+toggleDiv: document.querySelector('toggle-div'),
+hideSideBarDiv: document.querySelector('hide-side-bar-div'),
+
+//main layout
+layot: document.getElementById('layout'),
+header: document.getElementById('header'),
 headerBoardName: document.getElementById('header-board-name'),
+dropDownBtn: document.getElementById('dropDownBtn'),
+dropDownIcon: document.getElementById('dropDownIcon'),
+addNewTaskBtn: document.getElementById('add-new-task-button'),
+editBoardButton: document.getElementById('edit-board-button'),
+editBoardDiv: document.getElementById('editboarddiv'),
+deleteBoardBtn: document.getElementById('deleteBoardBtn'),
+stickyHeader: document.querySelector('sticky-header'),
+headerNameDiv: document.querySelector('header-name-div'),
+logoMobile: document.querySelector('logo-mobile'),
+headerBoardName: document.querySelector('header-board-name'),
+dropDownBtn: document.querySelector('dropDownBtn'),
+iconChevronDown: document.querySelector('icon-chevron-down'),
+primaryBtn: document.querySelector('primary-btn'),
+editBtn: document.querySelector('edit-btn'),
+editBtnsDiv: document.querySelector('editBtnsDiv'),
+editBtns: document.querySelector('editBtns'),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 columnDivs: document.getElementById('column-header-div'),
 filterDiv: document.getElementById('filterDiv'),
 hideSideBarBtn: document.getElementById('.hide-side-bar-btn'),
