@@ -27,6 +27,16 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+headerBoardName: document.getElementById('header-board-name'),
+columnDivs: document.getElementById('column-header-div'),
+filterDiv: document.getElementById('filterDiv'),
+hideSideBarBtn: document.getElementById('hide-side-bar-div'),
+showSideBarBtn: document.getElementById('show-side-bar-btn'),
+themeSwitch: document.getElementById('switch'),
+createNewTaskBtn: document.getElementById('create-task-btn'),
+modalWindow: document.querySelector('modal-window'),
+editTaskModal: document.getElementById('edit-task-modal-window'),
+
 
 }
 
@@ -65,7 +75,11 @@ function displayBoards(boards) {
     };
     boardsContainer.appendChild(boardElement);
   });
-
+const colTitles = {
+     todo: 'todo',
+     doing: 'doing',
+     done: 'done',
+}
 }
 
 // Filters tasks corresponding to the board name and displays them on the DOM.
@@ -79,6 +93,7 @@ function filterAndDisplayTasksByBoard(boardName) {
   elements.columnDivs.forEach(column => {
     const status = column.getAttribute("data-status");
     // Reset column content while preserving the column title
+    const colTitle = colTitle[status];
     column.innerHTML = `<div class="column-head-div">
                           <span class="dot" id="${status}-dot"></span>
                           <h4 class="columnHeader">${status.toUpperCase()}</h4>
@@ -117,7 +132,7 @@ function styleActiveBoard(boardName) {
       btn.add('active') 
     }
     else {
-      btn.remove('active'); 
+      btn.classList.remove('active'); 
     }
   });
 }
@@ -151,7 +166,7 @@ function addTaskToUI(task) {
 function setupEventListeners() {
   // Cancel editing task event listener
   const cancelEditBtn = document.getElementById('cancel-edit-btn');
-  cancelEditBtn.click(); toggleModal(false, elements.editTaskModal);
+  cancelEditBtn.addEventListener('click', () => {toggleModal(false, elements.editTaskModal)});
 
   // Cancel adding new task event listener
   const cancelAddTaskBtn = document.getElementById('cancel-add-task-btn');
@@ -200,6 +215,9 @@ function addTask(event) {
 
   //Assign user input to the task object
     const task = {
+      title: event.target.title.value,
+      description: event.target.description.value,
+      board: activeBoard, 
       
     };
     const newTask = createNewTask(task);
@@ -214,11 +232,20 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
+  if ( typeof show === 'boolean') {
+    elements.sideBarDiv.style.display = show ? 'block' : 'none';
+    localStorage.setItem('showSideBar', show);
+  } else {
+    console.error('Invalid arguements');
+  }
 
  
 }
 
 function toggleTheme() {
+  document.body.classList.toggle('light-theme');
+  const isLightTheme = document.body.classList.contains('light-theme');
+  localStorage.setItem('light-theme', isLightTheme ? 'enabled' : 'disabled');
  
 }
 
