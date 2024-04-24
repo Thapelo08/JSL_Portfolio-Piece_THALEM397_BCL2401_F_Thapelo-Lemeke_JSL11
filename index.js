@@ -262,15 +262,10 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
-  const sidebar = document.getElementById('side-bar-div');
-  if (show){
-    sidebar.style.display = 'block'; // Show the sidebar
-    elements.showSideBarBtn.style.display ='none'; //hide the sidebar button
+ elements.sideBar.style.display = show ? 'block' : 'none';
+ elements.showSideBarBtn.style.display = show ? 'none' : block;
 
-  } else{
-    sidebar.style.display = 'none'; // hide the sidebar
-    elements.showSideBarBtn.style.display ='block'; //show the sidebar button
-  }
+ localStorage.setItem('showSideBar', show);
 }
 
 function toggleTheme() {
