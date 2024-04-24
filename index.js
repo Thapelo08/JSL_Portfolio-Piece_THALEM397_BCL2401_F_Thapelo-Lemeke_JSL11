@@ -30,7 +30,7 @@ const elements = {
 headerBoardName: document.getElementById('header-board-name'),
 columnDivs: document.getElementById('column-header-div'),
 filterDiv: document.getElementById('filterDiv'),
-hideSideBarBtn: document.querySelector('.hide-side-bar-div'),
+hideSideBarBtn: document.getElementById('.hide-side-bar-btn'),
 showSideBarBtn: document.getElementById('show-side-bar-btn'),
 themeSwitch: document.getElementById('switch'),
 createNewTaskBtn: document.getElementById('create-task-btn'),
