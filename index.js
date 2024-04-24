@@ -294,9 +294,7 @@ document.getElementById("boards-nav-links-div").style.marginBottom = "300px";
 
 
 function openEditTaskModal(task) {
-  // Set task details in modal inputs
   
-
   // Get button elements from the task modal
   elements.editTaskTitleInput.value = task.title;
   elements.editSelectStatus.value = task.status;
@@ -325,11 +323,15 @@ function openEditTaskModal(task) {
 }
 
 function saveTaskChanges(taskId) {
-  // Get new user inputs
-  
 
   // Create an object with the updated task details
-
+  const updatedTask = {
+    board: activeBoard,
+    description: elements.editTaskDescInput.value,
+    id: taskId,
+    status: elements.editSelectStatus.value,
+    title: elements.editTaskTitleInput.value
+  };
 
   // Update task using a hlper functoin
  
