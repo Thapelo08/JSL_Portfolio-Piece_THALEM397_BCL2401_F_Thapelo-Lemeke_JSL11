@@ -269,15 +269,26 @@ function toggleSidebar(show) {
 }
 
 function toggleTheme() {
-  const isLightTheme = elements.switch.checked;
+  const isLightTheme = document.body.classList.contains('light-theme');
+  document.body.classList.toggle("light-theme");
+  const logo = document.getElementById('logo');
+  //isLightTheme ? logo.src = './assets/logo-dark.svg' : logo.src = './assets/logo-light.svg';
+  // localStorage.setItem('light-theme', !isLightTheme ? 'enabled' : 'disabled');
   if (isLightTheme) {
-    localStorage.setItem('light-theme', 'enabled' ); // set to light mode
-  } else{
-    localStorage.setItem('light-theme','disabled'); // set back to default
+    logo.src = './assets/logo-dark.svg';
+    localStorage.setItem('logo', './assets/logo-dark.svg');
+    localStorage.setItem('light-theme', 'disabled');
+  } else {
+    logo.src = './assets/logo-light.svg';
+    localStorage.setItem('logo', './assets/logo-light.svg');
+    localStorage.setItem('light-theme', 'enabled');
   }
-
-  document.body.classList.toggle('light-theme', isLightTheme); //Toggle the 'light-theme' class
 }
+
+document.getElementById("boards-nav-links-div").style.marginTop = "50px";
+document.getElementById("boards-nav-links-div").style.marginBottom = "300px";
+
+
 
 
 
