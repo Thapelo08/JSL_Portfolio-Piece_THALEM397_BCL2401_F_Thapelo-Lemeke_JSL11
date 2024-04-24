@@ -41,33 +41,16 @@ addNewTaskBtn: document.getElementById('add-new-task-btn'),
 editBoardButton: document.getElementById('edit-board-btn'),
 deleteBoardBtn: document.getElementById('deleteBoardBtn'),
 
+// Task Columns: Display tasks grouped by status (TODO, DOING, DONE).
+columnDivs: document.querySelectorAll(".column-div"),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-columnDivs: document.getElementById('column-header-div'),
-filterDiv: document.getElementById('filterDiv'),
-hideSideBarBtn: document.getElementById('.hide-side-bar-btn'),
-showSideBarBtn: document.getElementById('show-side-bar-btn'),
-themeSwitch: document.getElementById('switch'),
-createNewTaskBtn: document.getElementById('create-task-btn'),
-modalWindow: document.querySelector('modal-window'),
-editTaskModal: document.getElementById('edit-task-modal-window'),
+// New Task Modal: Form for creating a new task.
+modalWindow: document.getElementById("new-task-modal-window"),
+titleInput: document.getElementById("title-input"),
+descriptionInput: document.getElementById("desc-input"),
+selectStatus: document.getElementById("select-status"),
+createTaskBtn: document.getElementById("create-task-btn"),
+cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
 
 
 }
