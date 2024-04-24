@@ -30,7 +30,7 @@ const elements = {
 headerBoardName: document.getElementById('header-board-name'),
 columnDivs: document.getElementById('column-header-div'),
 filterDiv: document.getElementById('filterDiv'),
-hideSideBarBtn: document.getElementById('hide-side-bar-div'),
+hideSideBarBtn: document.querySelector('.hide-side-bar-div'),
 showSideBarBtn: document.getElementById('show-side-bar-btn'),
 themeSwitch: document.getElementById('switch'),
 createNewTaskBtn: document.getElementById('create-task-btn'),
@@ -295,7 +295,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function init() {
-  setupEventListeners();
   const showSidebar = localStorage.getItem('showSideBar') === 'true';
   toggleSidebar(showSidebar);
   const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
