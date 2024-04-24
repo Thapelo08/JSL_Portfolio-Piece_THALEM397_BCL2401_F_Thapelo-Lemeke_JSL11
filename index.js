@@ -334,10 +334,11 @@ function saveTaskChanges(taskId) {
   };
 
   // Update task using a hlper functoin
- 
+  putTask(taskId, updatedTask);
+
 
   // Close the modal and refresh the UI to reflect the changes
-
+  toggleModal(false, elements.editTaskModal)
   refreshTasksUI();
 }
 
@@ -348,9 +349,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function init() {
+  if (localStorage.getItem('logo') === './assets/logo-light.svg'){
+    logo.src = './assets/logo-light.svg';
+  }
+  setupEventListeners();
   const showSidebar = localStorage.getItem('showSideBar') === 'true';
   toggleSidebar(showSidebar);
   const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
   document.body.classList.toggle('light-theme', isLightTheme);
+  elements.themeSwitch.checked = isLightTheme;
   fetchAndDisplayBoardsAndTasks(); // Initial display of boards and tasks
 }
