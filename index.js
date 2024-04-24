@@ -244,7 +244,7 @@ function toggleSidebar(show) {
 }
 
 function toggleTheme() {
-  const isLightTheme = elements.themeSwitch.checked;
+  const isLightTheme = elements.switch.checked;
   if (isLightTheme) {
     localStorage.setItem('light-theme', 'enabled' ); // set to light mode
   } else{
