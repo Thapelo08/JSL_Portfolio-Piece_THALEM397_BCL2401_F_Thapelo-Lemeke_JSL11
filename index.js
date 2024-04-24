@@ -104,10 +104,10 @@ function displayBoards(boards) {
     boardsContainer.appendChild(boardElement);
   });
 
-const colTitles = {
-     todo: 'todo',
-     doing: 'doing',
-     done: 'done',
+const statusSelection = {
+     todo: "TODO",
+     doing: 'DOING',
+     done: 'DONE',
 }
 }
 
@@ -122,7 +122,7 @@ function filterAndDisplayTasksByBoard(boardName) {
   elements.columnDivs.forEach(column => {
     const status = column.getAttribute("data-status");
     // Reset column content while preserving the column title
-    const colTitle = colTitle[status];
+    const statusSelection = statusSelection[status];
     column.innerHTML = `<div class="column-head-div">
                           <span class="dot" id="${status}-dot"></span>
                           <h4 class="columnHeader">${status.toUpperCase()}</h4>
