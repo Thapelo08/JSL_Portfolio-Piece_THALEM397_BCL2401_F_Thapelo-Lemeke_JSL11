@@ -43,17 +43,6 @@ deleteBoardBtn: document.getElementById('deleteBoardBtn'),
 
 
 
-//TASK COLOUMNS
-
-todoHeadDiv: document.getElementById('todo-head-div'),
-todoDot: document.getElementById('todo-dot'),
-toDoText: document.getElementById('toDoText'),
-columnHeadDiv: document.querySelector('column-head-div'),
-dot: document.querySelector('dot'),
-columnHeader: document.querySelector('columnHeader'),
-
-//DOING COLUMN
-
 
 
 
