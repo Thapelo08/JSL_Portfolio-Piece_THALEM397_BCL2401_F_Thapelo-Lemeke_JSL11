@@ -217,7 +217,7 @@ function addTask(event) {
     const task = {
       title: event.target.title.value,
       description: event.target.description.value,
-      board: activeBoard, 
+      currStatus:  event.target.status.value
       
     };
     const newTask = createNewTask(task);
