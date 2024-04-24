@@ -40,7 +40,7 @@ editTaskModal: document.getElementById('edit-task-modal-window'),
 
 }
 
-let activeBoard = ""
+let activeBoard = "";
 
 // Extracts unique board names from tasks
 // TASK: FIX BUGS
