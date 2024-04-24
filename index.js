@@ -1,15 +1,14 @@
 // TASK: import helper functions from utils
 // TASK: import initialData 
-import {initialData} from './initialData.js'
+
 import {
   //utils/function.js
   getTasks,
   createNewTask,
   patchTask,
   putTask,
-  deleteTask
-} from './utils/taskFunctions.js'
-
+  deleteTask} from './utils/taskFunctions.js'
+   import {initialData} from './initialData.js'
 
 /*************************************************************************************************************************************************
  * FIX BUGS!!!
@@ -18,8 +17,8 @@ import {
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
   if (!localStorage.getItem('tasks')) {
-    localStorage.setItem('tasks', JSON.stringify(initializeData)); 
-    localStorage.setItem('showSideBar', 'true')
+    localStorage.setItem('tasks', JSON.stringify(initialData)); 
+    localStorage.setItem('showSideBar', 'false')
   } else {
     console.log('Data already exists in localStorage');
   }
@@ -27,20 +26,13 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
-// navigation bar
-sideBarDiv: document.getElementById('side-bar-div'),
-boardsNavLinksDiv: document.getElementById('boards-nav-links-div'),
-headLineSidePanel: document.getElementById('head-line-side-panel'),
-iconDark: document.getElementById('icon-dark'),
-themeSwitch: document.getElementById('switch'),
-iconLight: document.getElementById('icon-light'),
-hideSideBarBtn: document.getElementById('.hide-side-bar-btn'),
-showSideBarBtn: document.getElementById('show-side-bar-btn'),
-sideBar: document.querySelector('side-bar'),
-boardsNavLinksDiv: document.querySelector('boards-nav-links-div'),
-sideBarBottom: document.querySelector('side-bar-bottom'),
-toggleDiv: document.querySelector('toggle-div'),
-hideSideBarDiv: document.querySelector('hide-side-bar-div'),
+  // Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle.
+  boardsNavLinksDiv: document.getElementById("boards-nav-links-div"),
+  themeSwitch: document.getElementById("switch"),
+  hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
+  showSideBarBtn: document.getElementById("show-side-bar-btn"),
+  sideBar: document.querySelector(".side-bar"),
+  sideBarBottom: document.querySelector(".side-bar-bottom"),
 
 //main layout
 layot: document.getElementById('layout'),
@@ -62,6 +54,17 @@ primaryBtn: document.querySelector('primary-btn'),
 editBtn: document.querySelector('edit-btn'),
 editBtnsDiv: document.querySelector('editBtnsDiv'),
 editBtns: document.querySelector('editBtns'),
+
+//TASK COLOUMNS
+
+todoHeadDiv: document.getElementById('todo-head-div'),
+todoDot: document.getElementById('todo-dot'),
+toDoText: document.getElementById('toDoText'),
+columnHeadDiv: document.querySelector('column-head-div'),
+dot: document.querySelector('dot'),
+columnHeader: document.querySelector('columnHeader'),
+
+//DOING COLUMN
 
 
 
