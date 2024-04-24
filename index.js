@@ -34,26 +34,14 @@ const elements = {
   sideBar: document.querySelector(".side-bar"),
   sideBarBottom: document.querySelector(".side-bar-bottom"),
 
-//main layout
-layot: document.getElementById('layout'),
-header: document.getElementById('header'),
+//main layout: Header with board title, add task button, and main content area for task columns.
 headerBoardName: document.getElementById('header-board-name'),
 dropDownBtn: document.getElementById('dropDownBtn'),
-dropDownIcon: document.getElementById('dropDownIcon'),
-addNewTaskBtn: document.getElementById('add-new-task-button'),
-editBoardButton: document.getElementById('edit-board-button'),
-editBoardDiv: document.getElementById('editboarddiv'),
+addNewTaskBtn: document.getElementById('add-new-task-btn'),
+editBoardButton: document.getElementById('edit-board-btn'),
 deleteBoardBtn: document.getElementById('deleteBoardBtn'),
-stickyHeader: document.querySelector('sticky-header'),
-headerNameDiv: document.querySelector('header-name-div'),
-logoMobile: document.querySelector('logo-mobile'),
-headerBoardName: document.querySelector('header-board-name'),
-dropDownBtn: document.querySelector('dropDownBtn'),
-iconChevronDown: document.querySelector('icon-chevron-down'),
-primaryBtn: document.querySelector('primary-btn'),
-editBtn: document.querySelector('edit-btn'),
-editBtnsDiv: document.querySelector('editBtnsDiv'),
-editBtns: document.querySelector('editBtns'),
+
+
 
 //TASK COLOUMNS
 
