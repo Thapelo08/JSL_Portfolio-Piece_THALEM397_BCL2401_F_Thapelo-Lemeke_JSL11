@@ -94,7 +94,7 @@ function displayBoards(boards) {
     const boardElement = document.createElement("button");
     boardElement.textContent = board;
     boardElement.classList.add("board-btn");
-    boardElement.click();  { 
+    boardElement.onclick = () => { 
       elements.headerBoardName.textContent = board;
       filterAndDisplayTasksByBoard(board);
       activeBoard = board //assigns active board
@@ -103,6 +103,7 @@ function displayBoards(boards) {
     };
     boardsContainer.appendChild(boardElement);
   });
+  
 const colTitles = {
      todo: 'todo',
      doing: 'doing',
