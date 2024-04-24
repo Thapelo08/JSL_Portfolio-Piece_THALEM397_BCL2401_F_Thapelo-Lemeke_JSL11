@@ -241,17 +241,19 @@ function toggleSidebar(show) {
     sidebar.style.display = 'none'; // hide the sidebar
     elements.showSideBarBtn.style.display ='block'; //show the sidebar button
   }
-
-
- 
 }
 
 function toggleTheme() {
-  document.body.classList.toggle('light-theme');
-  const isLightTheme = document.body.classList.contains('light-theme');
-  localStorage.setItem('light-theme', isLightTheme ? 'enabled' : 'disabled');
- 
+  const isLightTheme = elements.themeSwitch.checked;
+  if (isLightTheme) {
+    localStorage.setItem('light-theme', 'enabled' ); // set to light mode
+  } else{
+    localStorage.setItem('light-theme','disabled'); // set back to default
+  }
+
+  document.body.classList.toggle('light-theme', isLightTheme); //Toggle the 'light-theme' class
 }
+
 
 
 
