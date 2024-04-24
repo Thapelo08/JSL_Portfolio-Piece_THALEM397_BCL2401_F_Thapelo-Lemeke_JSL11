@@ -298,14 +298,22 @@ function openEditTaskModal(task) {
   
 
   // Get button elements from the task modal
-
+  elements.editTaskTitleInput.value = task.title;
+  elements.editSelectStatus.value = task.status;
+  elements.editTaskDescInput.value = task.description;
 
   // Call saveTaskChanges upon click of Save Changes button
- 
+  elements.saveTaskChangesBtn.onclick = () => {
+    saveTaskChanges(task.id);
+    toggleModal(false, elements.editTaskModal);
+    refreshTasksUI();
+  };
 
   // Delete task using a helper function and close the task modal
 
 
+
+  
   toggleModal(true, elements.editTaskModal); // Show the edit task modal
 }
 
