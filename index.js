@@ -52,6 +52,19 @@ selectStatus: document.getElementById("select-status"),
 createTaskBtn: document.getElementById("create-task-btn"),
 cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"),
 
+// Edit Task Modal: Form for editing an existing task's details.
+editTaskModal: document.querySelector(".edit-task-modal-window"),
+editTaskForm: document.getElementById("edit-task-form"),
+editTaskTitleInput: document.getElementById("edit-task-title-input"),
+editBtn: document.getElementById("edit-btn"),
+editTaskDescInput: document.getElementById("edit-task-desc-input"),
+editSelectStatus: document.getElementById("edit-select-status"),
+saveTaskChangesBtn: document.getElementById("save-task-changes-btn"),
+cancelEditBtn: document.getElementById("cancel-edit-btn"),
+deleteTaskBtn: document.getElementById("delete-task-btn"),
+
+// Filter Div
+filterDiv: document.getElementById("filterDiv"),
 
 }
 
